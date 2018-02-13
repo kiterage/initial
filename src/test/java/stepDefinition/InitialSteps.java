@@ -48,7 +48,7 @@ public class InitialSteps {
     }
 
     @Before
-  //  @Дано("^открыт браузер и осуществлен переход по ссылке$")
+    //  @Дано("^открыт браузер и осуществлен переход по ссылке$")
     public void openBrowser() throws Throwable {
         driver = getDriver();
         driver.get("http://172.26.25.86:8081/sua/login");
@@ -65,8 +65,8 @@ public class InitialSteps {
     }
 
 
-     @Before
-     public void af() throws InterruptedException {
+    @Before
+    public void af() throws InterruptedException {
         Thread.sleep(1000);
         driver.findElement(By.xpath("//self::node()[text()=\"Поиск\"]")).click();
         Thread.sleep(1000);
@@ -84,7 +84,7 @@ public class InitialSteps {
     }
 
     @Before
-     public void браузер_закрыт() throws Throwable {
+    public void браузер_закрыт() throws Throwable {
         driver.quit();
         driver = null;
     }
